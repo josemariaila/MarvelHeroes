@@ -15,6 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.makeKeyAndVisible()
+        
+        let mainRouter = MainRouter(window: window)
+        mainRouter.showRootViewController()
+        
+        AppAppearance.apply(window)
+        
+        self.window = window
         
         return true
     }

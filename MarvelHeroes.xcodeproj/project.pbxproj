@@ -13,6 +13,9 @@
 		142456E31F3A1881005E5E84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142456DE1F3A1881005E5E84 /* LaunchScreen.storyboard */; };
 		142456E41F3A1881005E5E84 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 142456E01F3A1881005E5E84 /* Info.plist */; };
 		14D8868C1F3A2080005EE51D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8868B1F3A2080005EE51D /* Constants.swift */; };
+		14D8868F1F3A23C3005EE51D /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8868E1F3A23C3005EE51D /* AppAppearance.swift */; };
+		14D886911F3A23CF005EE51D /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D886901F3A23CF005EE51D /* MainRouter.swift */; };
+		14D886941F3A246A005EE51D /* UIColor+MarvelHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D886931F3A246A005EE51D /* UIColor+MarvelHeroes.swift */; };
 		3B46CF76E2BE94954A1E0314 /* Pods_MarvelHeroes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F10ADE9DC60DC44D7538A6B8 /* Pods_MarvelHeroes.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,9 @@
 		142456DF1F3A1881005E5E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		142456E01F3A1881005E5E84 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14D8868B1F3A2080005EE51D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		14D8868E1F3A23C3005EE51D /* AppAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
+		14D886901F3A23CF005EE51D /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		14D886931F3A246A005EE51D /* UIColor+MarvelHeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+MarvelHeroes.swift"; sourceTree = "<group>"; };
 		49DD563886F9032BEFE216F0 /* Pods-MarvelHeroes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelHeroes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelHeroes/Pods-MarvelHeroes.debug.xcconfig"; sourceTree = "<group>"; };
 		E11AD3CF4A2CF3DBD762BB8F /* Pods-MarvelHeroes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelHeroes.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelHeroes/Pods-MarvelHeroes.release.xcconfig"; sourceTree = "<group>"; };
 		F10ADE9DC60DC44D7538A6B8 /* Pods_MarvelHeroes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelHeroes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				14D8868B1F3A2080005EE51D /* Constants.swift */,
+				14D886921F3A244B005EE51D /* Extensions */,
+				14D8868D1F3A23B1005EE51D /* Visuals */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -131,6 +139,23 @@
 				142456E01F3A1881005E5E84 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		14D8868D1F3A23B1005EE51D /* Visuals */ = {
+			isa = PBXGroup;
+			children = (
+				14D8868E1F3A23C3005EE51D /* AppAppearance.swift */,
+				14D886901F3A23CF005EE51D /* MainRouter.swift */,
+			);
+			path = Visuals;
+			sourceTree = "<group>";
+		};
+		14D886921F3A244B005EE51D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				14D886931F3A246A005EE51D /* UIColor+MarvelHeroes.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		73596D65CBA8D8492931EDBA /* Pods */ = {
@@ -316,6 +341,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D886941F3A246A005EE51D /* UIColor+MarvelHeroes.swift in Sources */,
+				14D8868F1F3A23C3005EE51D /* AppAppearance.swift in Sources */,
+				14D886911F3A23CF005EE51D /* MainRouter.swift in Sources */,
 				142456E11F3A1881005E5E84 /* AppDelegate.swift in Sources */,
 				14D8868C1F3A2080005EE51D /* Constants.swift in Sources */,
 			);
