@@ -6,7 +6,7 @@
   Copyright © 2017 José María Ila. All rights reserved.
 */
 
-"title" = "Marvel Superheroes";
+"title" = "Heroes";
 "belongsTo" = "Belongs to";
 "error" = "Error";
 "accept" = "Accept";
