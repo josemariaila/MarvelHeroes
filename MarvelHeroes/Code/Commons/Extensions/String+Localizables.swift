@@ -11,6 +11,7 @@ import Foundation
 enum Strings: String {
     
     case title
+    case belongsTo
     
     var value: String {
         return NSLocalizedString(self.rawValue, comment: "")

@@ -9,7 +9,9 @@
 import Foundation
 
 protocol HeroesPresenterInterface {
+    var heroDetail: HeroDetailViewModel? { get }
     func getHeroes()
+    func detailDidDisappear()
 }
 
 class HeroesPresenter {
@@ -20,6 +22,7 @@ class HeroesPresenter {
     weak var detailView: DetailViewController?
     var heroes: [Hero] = []
     var viewModels: [HeroCellViewModel] = []
+    var heroSelected: Hero?
     
     init(interactor: HeroesInteractor, router: HeroesRouter) {
         self.interactor = interactor
@@ -48,13 +51,30 @@ private extension HeroesPresenter {
     }
     
     func showDetailHero(hero: Hero) {
-        
+        heroSelected = hero
+        router.showHeroDetail()
     }
 }
 
 extension HeroesPresenter: HeroesPresenterInterface {
+    
+    var heroDetail: HeroDetailViewModel? {
+        
+        guard let heroSelected = heroSelected else {
+            return nil
+        }
+        
+        return HeroDetailViewModel(hero: heroSelected)
+    }
+    
     func getHeroes() {
-        interactor.getHeroes()
+        if heroes.isEmpty {
+            interactor.getHeroes()
+        }
+    }
+    
+    func detailDidDisappear() {
+        heroSelected = nil
     }
 }
 

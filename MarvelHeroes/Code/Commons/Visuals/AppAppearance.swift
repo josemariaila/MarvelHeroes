@@ -19,6 +19,10 @@ struct AppColors {
 
 struct Sizes {
     static var spacing0: CGFloat = 0.0
+    static var spacing10: CGFloat = 10.0
+    static var spacing20: CGFloat = 20.0
+    static var spacing30: CGFloat = 30.0
+    static var size250: CGFloat = 250.0
 }
 
 class AppAppearance {

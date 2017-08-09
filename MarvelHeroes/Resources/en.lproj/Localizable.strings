@@ -7,3 +7,4 @@
 */
 
 "title" = "Marvel Superheroes";
+"belongsTo" = "Belongs to";

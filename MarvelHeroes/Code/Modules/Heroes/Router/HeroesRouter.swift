@@ -11,9 +11,20 @@ import UIKit
 class HeroesRouter {
     
     let mainRouter: MainRouterInterface
+    weak var presenter: HeroesPresenter?
     
     init(mainRouter: MainRouterInterface) {
         self.mainRouter = mainRouter
+    }
+    
+    func showHeroDetail() {
+        
+        guard let presenter = presenter else {
+            return
+        }
+        
+        let detailViewController = DetailViewController(presenter: presenter)
+        mainRouter.show(viewController: detailViewController, sender: nil)
     }
 }
 
@@ -31,6 +42,7 @@ extension HeroesRouter: RouterFactory {
         repository.output = interactor
         interactor.output = presenter
         presenter.listView = view
+        router.presenter = presenter
         
         return view
     }

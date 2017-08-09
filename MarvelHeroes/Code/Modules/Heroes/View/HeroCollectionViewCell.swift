@@ -71,23 +71,10 @@ extension HeroCollectionViewCell: CollectionableViewModelCellConfigurable {
     }
     
     private func configureImage(fromUrlString urlString: String?) {
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async { [weak self] in
-            
-            if let urlString = urlString, let url = URL(string: urlString) {
-                do {
-                    let data = try Data(contentsOf: url)
-                    
-                    DispatchQueue.main.async {
-                        self?.backgroundImageView.image = UIImage(data: data)
-                    }
-                    
-                } catch {
-                    self?.backgroundImageView.image = nil
-                }
-            } else {
-                self?.backgroundImageView.image = nil
-            }
-            
+        if let urlString = urlString {
+            backgroundImageView.setImage(fromUrlString: urlString)
+        } else {
+            backgroundImageView.image = nil
         }
     }
 }
