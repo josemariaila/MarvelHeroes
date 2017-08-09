@@ -87,7 +87,9 @@ extension HeroesPresenter: HeroesInteractorOutputInteface {
     }
     
     func onFailure(error: String) {
-        
+        listView?.presentAlertController(withMessage: error, completion: { [weak self] _ in
+            self?.getHeroes()
+        })
     }
 }
 

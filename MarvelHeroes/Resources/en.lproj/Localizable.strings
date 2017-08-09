@@ -8,3 +8,5 @@
 
 "title" = "Marvel Superheroes";
 "belongsTo" = "Belongs to";
+"error" = "Error";
+"accept" = "Accept";
