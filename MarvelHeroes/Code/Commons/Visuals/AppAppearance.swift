@@ -46,5 +46,7 @@ private extension AppAppearance {
         appearance.barTintColor = AppColors.white
         appearance.isTranslucent = false
         appearance.isHidden = false
+        
+        
     }
 }
