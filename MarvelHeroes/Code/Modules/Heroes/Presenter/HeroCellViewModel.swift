@@ -10,7 +10,7 @@ import Foundation
 
 struct HeroCellViewModel {
     let name: String
-    let imageName: String
+    let photo: String
     let selectionBlock: () -> Void
 }
 

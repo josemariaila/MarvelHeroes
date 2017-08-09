@@ -17,6 +17,10 @@ struct AppColors {
     static let grayDark = UIColor.colorRGB(red: 51.0, green: 51.0, blue: 51.0)
 }
 
+struct Sizes {
+    static var spacing0: CGFloat = 0.0
+}
+
 class AppAppearance {
     
     static func apply(_ window: UIWindow) {
@@ -35,8 +39,8 @@ private extension AppAppearance {
     static func applyNavigationBarStyle() {
         let appearance = UINavigationBar.appearance()
         appearance.tintColor = AppColors.black
-        appearance.barTintColor = AppColors.clear
+        appearance.barTintColor = AppColors.white
         appearance.isTranslucent = false
-        appearance.isHidden = true
+        appearance.isHidden = false
     }
 }

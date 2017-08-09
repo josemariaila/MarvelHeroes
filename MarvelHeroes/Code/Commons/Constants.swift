@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct MarvelAPI {
     static var heroesList: String {

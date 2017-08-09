@@ -25,19 +25,30 @@ class HeroesPresenter {
         self.interactor = interactor
         self.router = router
     }
+}
+
+private extension HeroesPresenter {
     
-    fileprivate func createViewModels() {
-        
+    func createViewModels() {
         var viewModels: [HeroCellViewModel] = []
-        
         for hero in heroes {
-            let viewModel = HeroCellViewModel(name: hero.name!, imageName: hero.photo!, selectionBlock: { [weak self] in
-                print("navigate")
+            
+            guard let name = hero.name, let photo = hero.photo else {
+                continue
+            }
+            
+            let viewModel = HeroCellViewModel(name: name, photo: photo, selectionBlock: { [weak self] in
+                self?.showDetailHero(hero: hero)
             })
+            
             viewModels.append(viewModel)
         }
         
         self.viewModels = viewModels
+    }
+    
+    func showDetailHero(hero: Hero) {
+        
     }
 }
 

@@ -35,11 +35,11 @@ extension HeroesInteractor: HeroesInteractorInputInterface {
 
 extension HeroesInteractor: HeroesRepositoryOutputInterface {
     func onHeroesSuccess(heroes: [Hero]) {
-        
+        output?.onHeroes(heroes: heroes)
     }
     
     func onHeroesFailure(error: Error) {
-        
+        output?.onFailure(error: error.localizedDescription)
     }
 }
 
