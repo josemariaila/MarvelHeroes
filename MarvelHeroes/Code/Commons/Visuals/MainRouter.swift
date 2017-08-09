@@ -14,7 +14,7 @@ protocol MainRouterInterface {
 }
 
 protocol RouterFactory {
-    static func create(withMainRouter mainRouter: MainRouter) -> UIViewController
+    static func create(withMainRouter mainRouter: MainRouterInterface) -> UIViewController
 }
 
 class MainRouter {
@@ -39,7 +39,7 @@ class MainRouter {
     }
     
     func showListViewController() {
-        let listViewController = UIViewController()
+        let listViewController = HeroesRouter.create(withMainRouter: self)
         let rootViewController = UINavigationController(rootViewController: listViewController)
         window.rootViewController = rootViewController
     }

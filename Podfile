@@ -7,6 +7,12 @@ target 'MarvelHeroes' do
 
     pod 'Alamofire', '~> 4.4'
     pod 'AlamofireObjectMapper', '~> 4.0'
-    pod 'AlamofireImage', '~> 3.1'
 
+end
+
+target 'MarvelHeroesTests' do
+    
+    pod 'Alamofire', '~> 4.4'
+    pod 'AlamofireObjectMapper', '~> 4.0'
+    
 end
