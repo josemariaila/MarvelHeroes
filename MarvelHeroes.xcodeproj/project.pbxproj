@@ -210,8 +210,8 @@
 		14D886921F3A244B005EE51D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				14D886931F3A246A005EE51D /* UIColor+MarvelHeroes.swift */,
 				14D886C41F3B882F005EE51D /* String+Localizables.swift */,
+				14D886931F3A246A005EE51D /* UIColor+MarvelHeroes.swift */,
 				14D886C61F3B8D0D005EE51D /* UIImageView+URLImage.swift */,
 				14D886CA1F3B9A80005EE51D /* UIViewController+UIAlertController.swift */,
 			);
