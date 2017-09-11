@@ -12,17 +12,16 @@ struct AppColors {
     static let clear = UIColor.clear
     static let white = UIColor.white
     static let black = UIColor.black
-    static let grayLight = UIColor.colorRGB(red: 202.0, green: 202.0, blue: 202.0)
     static let gray = UIColor.colorRGB(red: 108.0, green: 108.0, blue: 108.0)
     static let grayDark = UIColor.colorRGB(red: 51.0, green: 51.0, blue: 51.0)
 }
 
 struct Sizes {
-    static var spacing0: CGFloat = 0.0
-    static var spacing10: CGFloat = 10.0
-    static var spacing20: CGFloat = 20.0
-    static var spacing30: CGFloat = 30.0
-    static var size250: CGFloat = 250.0
+    static let spacing0: CGFloat = 0.0
+    static let spacing10: CGFloat = 10.0
+    static let spacing20: CGFloat = 20.0
+    static let spacing30: CGFloat = 30.0
+    static let size250: CGFloat = 250.0
 }
 
 class AppAppearance {
