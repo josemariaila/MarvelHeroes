@@ -19,10 +19,10 @@ protocol HeroesInteractorOutputInteface: class {
 
 class HeroesInteractor {
     
-    let repository: HeroesRepository
+    let repository: HeroesRepositoryInputInterface
     weak var output: HeroesInteractorOutputInteface?
     
-    init(repository: HeroesRepository) {
+    init(repository: HeroesRepositoryInputInterface) {
         self.repository = repository
     }
 }

@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol ListViewInterface {
+protocol ListViewInterface: class {
     func reloadData()
 }
 
 class ListViewController: UIViewController {
     
-    let presenter: HeroesPresenter
+    let presenter: HeroesPresenterInterface
     let collectionViewCollectionable: AnyCollectionable<HeroCellViewModel>
     
     lazy var collectionView: UICollectionView = {
@@ -34,7 +34,7 @@ class ListViewController: UIViewController {
         return collectionView
     }()
     
-    init(presenter: HeroesPresenter, collectionable: AnyCollectionable<HeroCellViewModel>) {
+    init(presenter: HeroesPresenterInterface, collectionable: AnyCollectionable<HeroCellViewModel>) {
         self.presenter = presenter
         self.collectionViewCollectionable = collectionable
         super.init(nibName: nil, bundle: nil)

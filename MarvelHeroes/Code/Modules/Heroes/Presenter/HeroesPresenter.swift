@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol HeroesPresenterInterface {
+protocol HeroesPresenterInterface: class {
     var heroDetail: HeroDetailViewModel? { get }
     func getHeroes()
     func detailDidDisappear()
@@ -16,15 +16,14 @@ protocol HeroesPresenterInterface {
 
 class HeroesPresenter {
     
-    let interactor: HeroesInteractor
-    let router: HeroesRouter
-    weak var listView: ListViewController?
-    weak var detailView: DetailViewController?
+    let interactor: HeroesInteractorInputInterface
+    let router: HeroesRouterInterface
+    weak var listView: ListViewInterface?
     var heroes: [Hero] = []
     var viewModels: [HeroCellViewModel] = []
     var heroSelected: Hero?
     
-    init(interactor: HeroesInteractor, router: HeroesRouter) {
+    init(interactor: HeroesInteractorInputInterface, router: HeroesRouterInterface) {
         self.interactor = interactor
         self.router = router
     }
@@ -87,7 +86,7 @@ extension HeroesPresenter: HeroesInteractorOutputInteface {
     }
     
     func onFailure(error: String) {
-        listView?.presentAlertController(withMessage: error, completion: { [weak self] _ in
+        router.showError(withMessage: error, completion: { [weak self] _ in
             self?.getHeroes()
         })
     }

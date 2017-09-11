@@ -8,9 +8,12 @@
 
 import UIKit
 
+typealias AcceptActionCompletion = (UIAlertAction) -> Void
+
 protocol MainRouterInterface {
     func show(viewController: UIViewController, sender: Any?)
     func present(viewController: UIViewController, animated: Bool, completion:(() -> Void)?)
+    func presentAlertController(withMessage: String, completion: AcceptActionCompletion?)
 }
 
 protocol RouterFactory {
@@ -53,5 +56,19 @@ extension MainRouter: MainRouterInterface {
     
     func present(viewController: UIViewController, animated: Bool, completion:(() -> Void)?) {
         rootViewController.present(viewController, animated: animated, completion: completion)
+    }
+    
+    func presentAlertController(withMessage: String, completion: AcceptActionCompletion?) {
+        
+        let alertController = UIAlertController(title: Strings.error.value,
+                                                message: withMessage,
+                                                preferredStyle: .alert)
+        
+        let acceptAction = UIAlertAction(title: Strings.accept.value,
+                                         style: .default,
+                                         handler: completion)
+        
+        alertController.addAction(acceptAction)
+        present(viewController: alertController, animated: true, completion: nil)
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    let presenter: HeroesPresenter
+    let presenter: HeroesPresenterInterface
     
     lazy var scrollView: UIScrollView = { [unowned self] in
         let scrollView = UIScrollView()
@@ -102,7 +102,7 @@ class DetailViewController: UIViewController {
         return label
     }()
     
-    init(presenter: HeroesPresenter) {
+    init(presenter: HeroesPresenterInterface) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }

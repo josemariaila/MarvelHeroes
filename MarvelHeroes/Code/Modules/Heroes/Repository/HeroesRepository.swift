@@ -18,10 +18,10 @@ protocol HeroesRepositoryOutputInterface: class {
 }
 
 class HeroesRepository {
-    let dataSource: HeroesDataSource
+    let dataSource: HeroesDataSourceInterface
     weak var output: HeroesRepositoryOutputInterface?
     
-    init(dataSource: HeroesDataSource) {
+    init(dataSource: HeroesDataSourceInterface) {
         self.dataSource = dataSource
     }
 }
