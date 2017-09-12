@@ -336,6 +336,7 @@
 				142456B31F3A16C1005E5E84 /* Resources */,
 				592B2E71C2B07FAAF6404D14 /* [CP] Embed Pods Frameworks */,
 				7254243D9B67520F7F790B54 /* [CP] Copy Pods Resources */,
+				6BE5C29A1F67E5E800F10AA2 /* Fabric */,
 				6BE5C2991F67CFD000F10AA2 /* SwiftLint */,
 			);
 			buildRules = (
@@ -524,6 +525,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
+		6BE5C29A1F67E5E800F10AA2 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 30642c0b9238e4408f7c1dc3be900c1c64e1332f ac859fa787da55754b67d2b743ee4c89dd6ea83838c8c246c1559538639c83b4";
 		};
 		7254243D9B67520F7F790B54 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -727,7 +742,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MarvelHeroes/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jmila.marvelheroes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmic.marvelheroes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -741,7 +756,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MarvelHeroes/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jmila.marvelheroes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmic.marvelheroes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
