@@ -12,7 +12,6 @@
 		142456E21F3A1881005E5E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 142456DD1F3A1881005E5E84 /* Assets.xcassets */; };
 		142456E31F3A1881005E5E84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142456DE1F3A1881005E5E84 /* LaunchScreen.storyboard */; };
 		14D8868C1F3A2080005EE51D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8868B1F3A2080005EE51D /* Constants.swift */; };
-		14D8868F1F3A23C3005EE51D /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8868E1F3A23C3005EE51D /* AppAppearance.swift */; };
 		14D886911F3A23CF005EE51D /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D886901F3A23CF005EE51D /* MainRouter.swift */; };
 		14D886941F3A246A005EE51D /* UIColor+MarvelHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D886931F3A246A005EE51D /* UIColor+MarvelHeroes.swift */; };
 		14D8869D1F3A2830005EE51D /* HeroesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8869C1F3A2830005EE51D /* HeroesDataSource.swift */; };
@@ -61,7 +60,6 @@
 		142456DF1F3A1881005E5E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		142456E01F3A1881005E5E84 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14D8868B1F3A2080005EE51D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		14D8868E1F3A23C3005EE51D /* AppAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		14D886901F3A23CF005EE51D /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		14D886931F3A246A005EE51D /* UIColor+MarvelHeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+MarvelHeroes.swift"; sourceTree = "<group>"; };
 		14D8869C1F3A2830005EE51D /* HeroesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroesDataSource.swift; sourceTree = "<group>"; };
@@ -197,7 +195,6 @@
 		14D8868D1F3A23B1005EE51D /* Visuals */ = {
 			isa = PBXGroup;
 			children = (
-				14D8868E1F3A23C3005EE51D /* AppAppearance.swift */,
 				14D886B61F3A49D2005EE51D /* Collectionable.swift */,
 				14D886901F3A23CF005EE51D /* MainRouter.swift */,
 				14D886B81F3A49FE005EE51D /* Reusable.swift */,
@@ -557,7 +554,6 @@
 				14D886AD1F3A352D005EE51D /* HeroesPresenter.swift in Sources */,
 				14D886A91F3A30FE005EE51D /* HeroesInteractor.swift in Sources */,
 				14D886C71F3B8D0D005EE51D /* UIImageView+URLImage.swift in Sources */,
-				14D8868F1F3A23C3005EE51D /* AppAppearance.swift in Sources */,
 				14D886911F3A23CF005EE51D /* MainRouter.swift in Sources */,
 				14D886BB1F3A4AE3005EE51D /* HeroCellViewModel.swift in Sources */,
 				14D886B11F3A366F005EE51D /* ListViewController.swift in Sources */,

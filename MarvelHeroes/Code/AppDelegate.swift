@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mainRouter = MainRouter(window: window)
         mainRouter?.showRootViewController()
         
-        AppAppearance.apply(window)
+        MainRouter.apply(window)
         
         self.window = window
         

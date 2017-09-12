@@ -37,6 +37,11 @@ class MainRouter {
         self.window = window
     }
     
+    static func apply(_ window: UIWindow) {
+        MainRouter.applyWindowStyle(window)
+        MainRouter.applyNavigationBarStyle()
+    }
+    
     func showRootViewController() {
         showListViewController()
     }
@@ -45,6 +50,22 @@ class MainRouter {
         let listViewController = HeroesRouter.create(withMainRouter: self)
         let rootViewController = UINavigationController(rootViewController: listViewController)
         window.rootViewController = rootViewController
+    }
+}
+
+private extension MainRouter {
+    
+    static func applyWindowStyle(_ window: UIWindow) {
+        window.backgroundColor = AppColors.white
+        window.tintColor = AppColors.black
+    }
+    
+    static func applyNavigationBarStyle() {
+        let appearance = UINavigationBar.appearance()
+        appearance.tintColor = AppColors.black
+        appearance.barTintColor = AppColors.white
+        appearance.isTranslucent = false
+        appearance.isHidden = false
     }
 }
 
@@ -72,3 +93,5 @@ extension MainRouter: MainRouterInterface {
         present(viewController: alertController, animated: true, completion: nil)
     }
 }
+
+
