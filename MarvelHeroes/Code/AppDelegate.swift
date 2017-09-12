@@ -13,20 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var mainRouter: MainRouter?
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
-        
+
         mainRouter = MainRouter(window: window)
         mainRouter?.showRootViewController()
-        
+
         MainRouter.apply(window)
-        
+
         self.window = window
-        
+
         return true
     }
 }
-

@@ -23,11 +23,10 @@ extension DataSource {
             switch response.result {
             case .success(let value):
                 success(value)
-                
+
             case .failure(let error):
                 failure(error)
             }
         }
     }
 }
-

@@ -20,7 +20,7 @@ protocol HeroesRepositoryOutputInterface: class {
 class HeroesRepository {
     let dataSource: HeroesDataSourceInterface
     weak var output: HeroesRepositoryOutputInterface?
-    
+
     init(dataSource: HeroesDataSourceInterface) {
         self.dataSource = dataSource
     }
@@ -33,7 +33,7 @@ extension HeroesRepository: HeroesRepositoryInputInterface {
                 return
             }
             self?.output?.onHeroesSuccess(heroes: heroes)
-            
+
         }, failure: { [weak self] error in
             self?.output?.onHeroesFailure(error: error)
         })

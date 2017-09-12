@@ -9,7 +9,6 @@
 import ObjectMapper
 
 class Hero: Mappable {
-    
     var name: String?
     var photo: String?
     var realName: String?
@@ -17,9 +16,9 @@ class Hero: Mappable {
     var power: String?
     var abilities: String?
     var groups: String?
-    
+
     required init?(map: Map) {}
-    
+
     func mapping(map: Map) {
         name <- map["name"]
         photo <- map["photo"]

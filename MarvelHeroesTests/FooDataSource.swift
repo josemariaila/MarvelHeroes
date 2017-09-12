@@ -6,20 +6,19 @@
 //  Copyright © 2017 José María Ila. All rights reserved.
 //
 
-import Foundation
 import ObjectMapper
 
 typealias SuccessCompletionBlock = (_ object: Foo) -> Void
 
 class FooDataSource: DataSource {
-    
+
     var downloadOnError = false
-    
+
     func downloadFooJSON(success: @escaping SuccessCompletionBlock, failure: @escaping FailureCompletionBlock) {
-        
+
         var path: String = ""
         let bundle = Bundle(for: FooDataSource.self)
-        
+
         if downloadOnError {
             path = bundle.path(forResource: "FooJSON", ofType: "json")!
         } else {
@@ -29,15 +28,13 @@ class FooDataSource: DataSource {
     }
 }
 
-class Foo: NSObject, Mappable {
-    
+class Foo: Mappable {
     var name: String?
     var lastName: String?
     var email: String?
-    
-    required init?(map: Map) {
-    }
-    
+
+    required init?(map: Map) {}
+
     func mapping(map: Map) {
         name <- map["name"]
         lastName <- map["lastName"]

@@ -14,33 +14,32 @@ protocol HeroesRouterInterface: class {
 }
 
 class HeroesRouter {
-    
     let mainRouter: MainRouterInterface
     weak var presenter: HeroesPresenterInterface?
-    
+
     init(mainRouter: MainRouterInterface) {
         self.mainRouter = mainRouter
     }
 }
 
 extension HeroesRouter: HeroesRouterInterface {
-    
+
     func showHeroDetail() {
         guard let presenter = presenter else {
             return
         }
-        
+
         let detailViewController = DetailViewController(presenter: presenter)
         mainRouter.show(viewController: detailViewController, sender: nil)
     }
-    
+
     func showError(withMessage: String, completion: AcceptActionCompletion?) {
         mainRouter.presentAlertController(withMessage: withMessage, completion: completion)
     }
 }
 
 extension HeroesRouter: RouterFactory {
-    
+
     static func create(withMainRouter mainRouter: MainRouterInterface) -> UIViewController {
         let dataSource = HeroesDataSource()
         let repository = HeroesRepository(dataSource: dataSource)
@@ -49,12 +48,12 @@ extension HeroesRouter: RouterFactory {
         let presenter = HeroesPresenter(interactor: interactor, router: router)
         let collectionViewCollectionable = AnyCollectionable(presenter)
         let view = ListViewController(presenter: presenter, collectionable: collectionViewCollectionable)
-        
+
         repository.output = interactor
         interactor.output = presenter
         presenter.listView = view
         router.presenter = presenter
-        
+
         return view
     }
 }

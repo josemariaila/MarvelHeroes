@@ -7,6 +7,7 @@ target 'MarvelHeroes' do
 
     pod 'Alamofire', '~> 4.4'
     pod 'AlamofireObjectMapper', '~> 4.0'
+    pod 'SwiftLint'
 
 end
 

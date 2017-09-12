@@ -336,6 +336,7 @@
 				142456B31F3A16C1005E5E84 /* Resources */,
 				592B2E71C2B07FAAF6404D14 /* [CP] Embed Pods Frameworks */,
 				7254243D9B67520F7F790B54 /* [CP] Copy Pods Resources */,
+				6BE5C2991F67CFD000F10AA2 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -509,6 +510,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarvelHeroes/Pods-MarvelHeroes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6BE5C2991F67CFD000F10AA2 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		7254243D9B67520F7F790B54 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

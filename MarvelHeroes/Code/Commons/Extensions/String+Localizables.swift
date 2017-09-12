@@ -9,12 +9,11 @@
 import Foundation
 
 enum Strings: String {
-    
     case title
     case belongsTo
     case error
     case accept
-    
+
     var value: String {
         return NSLocalizedString(self.rawValue, comment: "")
     }

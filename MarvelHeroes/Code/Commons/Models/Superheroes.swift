@@ -9,11 +9,10 @@
 import ObjectMapper
 
 class Superheroes: Mappable {
-    
     var heroes: [Hero]?
-    
+
     required init?(map: Map) {}
-    
+
     func mapping(map: Map) {
         heroes <- map["superheroes"]
     }

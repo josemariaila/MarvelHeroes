@@ -21,31 +21,30 @@ protocol RouterFactory {
 }
 
 class MainRouter {
-    
     let window: UIWindow
-    
+
     var rootViewController: UIViewController {
-        
+
         guard let rootViewController = window.rootViewController else {
             fatalError("There is no rootViewController installed on the window")
         }
-        
+
         return rootViewController
     }
-    
+
     init(window: UIWindow) {
         self.window = window
     }
-    
+
     static func apply(_ window: UIWindow) {
         MainRouter.applyWindowStyle(window)
         MainRouter.applyNavigationBarStyle()
     }
-    
+
     func showRootViewController() {
         showListViewController()
     }
-    
+
     func showListViewController() {
         let listViewController = HeroesRouter.create(withMainRouter: self)
         let rootViewController = UINavigationController(rootViewController: listViewController)
@@ -54,12 +53,12 @@ class MainRouter {
 }
 
 private extension MainRouter {
-    
+
     static func applyWindowStyle(_ window: UIWindow) {
         window.backgroundColor = AppColors.white
         window.tintColor = AppColors.black
     }
-    
+
     static func applyNavigationBarStyle() {
         let appearance = UINavigationBar.appearance()
         appearance.tintColor = AppColors.black
@@ -70,28 +69,26 @@ private extension MainRouter {
 }
 
 extension MainRouter: MainRouterInterface {
-    
+
     func show(viewController: UIViewController, sender: Any?) {
         rootViewController.show(viewController, sender: sender)
     }
-    
+
     func present(viewController: UIViewController, animated: Bool, completion:(() -> Void)?) {
         rootViewController.present(viewController, animated: animated, completion: completion)
     }
-    
+
     func presentAlertController(withMessage: String, completion: AcceptActionCompletion?) {
-        
+
         let alertController = UIAlertController(title: Strings.error.value,
                                                 message: withMessage,
                                                 preferredStyle: .alert)
-        
+
         let acceptAction = UIAlertAction(title: Strings.accept.value,
                                          style: .default,
                                          handler: completion)
-        
+
         alertController.addAction(acceptAction)
         present(viewController: alertController, animated: true, completion: nil)
     }
 }
-
-
