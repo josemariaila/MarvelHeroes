@@ -6,15 +6,13 @@
 //  Copyright © 2017 José María Ila. All rights reserved.
 //
 
-import Foundation
 import ObjectMapper
 
-class Superheroes: NSObject, Mappable {
+class Superheroes: Mappable {
     
     var heroes: [Hero]?
     
-    required init?(map: Map) {
-    }
+    required init?(map: Map) {}
     
     func mapping(map: Map) {
         heroes <- map["superheroes"]
