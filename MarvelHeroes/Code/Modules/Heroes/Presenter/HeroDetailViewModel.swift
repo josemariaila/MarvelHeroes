@@ -15,17 +15,17 @@ struct HeroDetailViewModel {
     let power: String
     let abilities: String
     let groups: String
-    
+
     init(hero: Hero) {
         name = hero.name ?? ""
         photo = hero.photo ?? ""
-        
+
         let realName = hero.realName ?? ""
         let height = hero.height ?? ""
         realNameHeight = "\(realName), \(height)"
         power = hero.power ?? ""
         abilities = hero.abilities ?? ""
-        
+
         let _groups = hero.groups ?? ""
         let belongsTo = Strings.belongsTo.value
         groups = "\(belongsTo) \(_groups)"

@@ -12,7 +12,6 @@
 		142456E21F3A1881005E5E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 142456DD1F3A1881005E5E84 /* Assets.xcassets */; };
 		142456E31F3A1881005E5E84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142456DE1F3A1881005E5E84 /* LaunchScreen.storyboard */; };
 		14D8868C1F3A2080005EE51D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8868B1F3A2080005EE51D /* Constants.swift */; };
-		14D8868F1F3A23C3005EE51D /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8868E1F3A23C3005EE51D /* AppAppearance.swift */; };
 		14D886911F3A23CF005EE51D /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D886901F3A23CF005EE51D /* MainRouter.swift */; };
 		14D886941F3A246A005EE51D /* UIColor+MarvelHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D886931F3A246A005EE51D /* UIColor+MarvelHeroes.swift */; };
 		14D8869D1F3A2830005EE51D /* HeroesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8869C1F3A2830005EE51D /* HeroesDataSource.swift */; };
@@ -33,7 +32,6 @@
 		14D886C51F3B882F005EE51D /* String+Localizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D886C41F3B882F005EE51D /* String+Localizables.swift */; };
 		14D886C71F3B8D0D005EE51D /* UIImageView+URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D886C61F3B8D0D005EE51D /* UIImageView+URLImage.swift */; };
 		14D886C91F3B9452005EE51D /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D886C81F3B9452005EE51D /* HeroDetailViewModel.swift */; };
-		14D886CB1F3B9A80005EE51D /* UIViewController+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D886CA1F3B9A80005EE51D /* UIViewController+UIAlertController.swift */; };
 		14D886CD1F3BA032005EE51D /* FooDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D886CC1F3BA032005EE51D /* FooDataSource.swift */; };
 		14D886CE1F3BA04D005EE51D /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D886A21F3A2C88005EE51D /* DataSource.swift */; };
 		14D886D91F3BA968005EE51D /* EmptyJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 14D886D71F3BA968005EE51D /* EmptyJSON.json */; };
@@ -62,7 +60,6 @@
 		142456DF1F3A1881005E5E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		142456E01F3A1881005E5E84 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14D8868B1F3A2080005EE51D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		14D8868E1F3A23C3005EE51D /* AppAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		14D886901F3A23CF005EE51D /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		14D886931F3A246A005EE51D /* UIColor+MarvelHeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+MarvelHeroes.swift"; sourceTree = "<group>"; };
 		14D8869C1F3A2830005EE51D /* HeroesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroesDataSource.swift; sourceTree = "<group>"; };
@@ -83,7 +80,6 @@
 		14D886C41F3B882F005EE51D /* String+Localizables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localizables.swift"; sourceTree = "<group>"; };
 		14D886C61F3B8D0D005EE51D /* UIImageView+URLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+URLImage.swift"; sourceTree = "<group>"; };
 		14D886C81F3B9452005EE51D /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
-		14D886CA1F3B9A80005EE51D /* UIViewController+UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlertController.swift"; sourceTree = "<group>"; };
 		14D886CC1F3BA032005EE51D /* FooDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooDataSource.swift; sourceTree = "<group>"; };
 		14D886D71F3BA968005EE51D /* EmptyJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EmptyJSON.json; sourceTree = "<group>"; };
 		14D886D81F3BA968005EE51D /* FooJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FooJSON.json; sourceTree = "<group>"; };
@@ -199,7 +195,6 @@
 		14D8868D1F3A23B1005EE51D /* Visuals */ = {
 			isa = PBXGroup;
 			children = (
-				14D8868E1F3A23C3005EE51D /* AppAppearance.swift */,
 				14D886B61F3A49D2005EE51D /* Collectionable.swift */,
 				14D886901F3A23CF005EE51D /* MainRouter.swift */,
 				14D886B81F3A49FE005EE51D /* Reusable.swift */,
@@ -213,7 +208,6 @@
 				14D886C41F3B882F005EE51D /* String+Localizables.swift */,
 				14D886931F3A246A005EE51D /* UIColor+MarvelHeroes.swift */,
 				14D886C61F3B8D0D005EE51D /* UIImageView+URLImage.swift */,
-				14D886CA1F3B9A80005EE51D /* UIViewController+UIAlertController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -342,6 +336,8 @@
 				142456B31F3A16C1005E5E84 /* Resources */,
 				592B2E71C2B07FAAF6404D14 /* [CP] Embed Pods Frameworks */,
 				7254243D9B67520F7F790B54 /* [CP] Copy Pods Resources */,
+				6BE5C29A1F67E5E800F10AA2 /* Fabric */,
+				6BE5C2991F67CFD000F10AA2 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -516,6 +512,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarvelHeroes/Pods-MarvelHeroes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6BE5C2991F67CFD000F10AA2 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
+		6BE5C29A1F67E5E800F10AA2 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 30642c0b9238e4408f7c1dc3be900c1c64e1332f ac859fa787da55754b67d2b743ee4c89dd6ea83838c8c246c1559538639c83b4";
+		};
 		7254243D9B67520F7F790B54 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -560,7 +584,6 @@
 				14D886AD1F3A352D005EE51D /* HeroesPresenter.swift in Sources */,
 				14D886A91F3A30FE005EE51D /* HeroesInteractor.swift in Sources */,
 				14D886C71F3B8D0D005EE51D /* UIImageView+URLImage.swift in Sources */,
-				14D8868F1F3A23C3005EE51D /* AppAppearance.swift in Sources */,
 				14D886911F3A23CF005EE51D /* MainRouter.swift in Sources */,
 				14D886BB1F3A4AE3005EE51D /* HeroCellViewModel.swift in Sources */,
 				14D886B11F3A366F005EE51D /* ListViewController.swift in Sources */,
@@ -572,7 +595,6 @@
 				14D886B31F3A37AD005EE51D /* DetailViewController.swift in Sources */,
 				14D8868C1F3A2080005EE51D /* Constants.swift in Sources */,
 				14D886BD1F3B7383005EE51D /* HeroCollectionViewCell.swift in Sources */,
-				14D886CB1F3B9A80005EE51D /* UIViewController+UIAlertController.swift in Sources */,
 				14D886C91F3B9452005EE51D /* HeroDetailViewModel.swift in Sources */,
 				14D886AF1F3A3607005EE51D /* HeroesRouter.swift in Sources */,
 				14D886B71F3A49D2005EE51D /* Collectionable.swift in Sources */,
@@ -720,7 +742,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MarvelHeroes/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jmila.marvelheroes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmic.marvelheroes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -734,7 +756,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MarvelHeroes/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jmila.marvelheroes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmic.marvelheroes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

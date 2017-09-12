@@ -18,11 +18,10 @@ protocol HeroesInteractorOutputInteface: class {
 }
 
 class HeroesInteractor {
-    
-    let repository: HeroesRepository
+    let repository: HeroesRepositoryInputInterface
     weak var output: HeroesInteractorOutputInteface?
-    
-    init(repository: HeroesRepository) {
+
+    init(repository: HeroesRepositoryInputInterface) {
         self.repository = repository
     }
 }
@@ -37,9 +36,8 @@ extension HeroesInteractor: HeroesRepositoryOutputInterface {
     func onHeroesSuccess(heroes: [Hero]) {
         output?.onHeroes(heroes: heroes)
     }
-    
+
     func onHeroesFailure(error: Error) {
         output?.onFailure(error: error.localizedDescription)
     }
 }
-

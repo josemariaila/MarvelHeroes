@@ -8,48 +8,46 @@
 
 import Foundation
 
-protocol HeroesPresenterInterface {
+protocol HeroesPresenterInterface: class {
     var heroDetail: HeroDetailViewModel? { get }
     func getHeroes()
     func detailDidDisappear()
 }
 
 class HeroesPresenter {
-    
-    let interactor: HeroesInteractor
-    let router: HeroesRouter
-    weak var listView: ListViewController?
-    weak var detailView: DetailViewController?
+    let interactor: HeroesInteractorInputInterface
+    let router: HeroesRouterInterface
+    weak var listView: ListViewInterface?
     var heroes: [Hero] = []
     var viewModels: [HeroCellViewModel] = []
     var heroSelected: Hero?
-    
-    init(interactor: HeroesInteractor, router: HeroesRouter) {
+
+    init(interactor: HeroesInteractorInputInterface, router: HeroesRouterInterface) {
         self.interactor = interactor
         self.router = router
     }
 }
 
 private extension HeroesPresenter {
-    
+
     func createViewModels() {
         var viewModels: [HeroCellViewModel] = []
         for hero in heroes {
-            
+
             guard let name = hero.name, let photo = hero.photo else {
                 continue
             }
-            
+
             let viewModel = HeroCellViewModel(name: name, photo: photo, selectionBlock: { [weak self] in
                 self?.showDetailHero(hero: hero)
             })
-            
+
             viewModels.append(viewModel)
         }
-        
+
         self.viewModels = viewModels
     }
-    
+
     func showDetailHero(hero: Hero) {
         heroSelected = hero
         router.showHeroDetail()
@@ -57,37 +55,36 @@ private extension HeroesPresenter {
 }
 
 extension HeroesPresenter: HeroesPresenterInterface {
-    
     var heroDetail: HeroDetailViewModel? {
-        
+
         guard let heroSelected = heroSelected else {
             return nil
         }
-        
+
         return HeroDetailViewModel(hero: heroSelected)
     }
-    
+
     func getHeroes() {
         if heroes.isEmpty {
             interactor.getHeroes()
         }
     }
-    
+
     func detailDidDisappear() {
         heroSelected = nil
     }
 }
 
 extension HeroesPresenter: HeroesInteractorOutputInteface {
-    
+
     func onHeroes(heroes: [Hero]) {
         self.heroes = heroes
         createViewModels()
         listView?.reloadData()
     }
-    
+
     func onFailure(error: String) {
-        listView?.presentAlertController(withMessage: error, completion: { [weak self] _ in
+        router.showError(withMessage: error, completion: { [weak self] _ in
             self?.getHeroes()
         })
     }

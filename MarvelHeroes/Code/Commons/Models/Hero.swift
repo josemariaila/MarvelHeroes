@@ -6,11 +6,9 @@
 //  Copyright © 2017 José María Ila. All rights reserved.
 //
 
-import Foundation
 import ObjectMapper
 
-class Hero: NSObject, Mappable {
-    
+class Hero: Mappable {
     var name: String?
     var photo: String?
     var realName: String?
@@ -18,10 +16,9 @@ class Hero: NSObject, Mappable {
     var power: String?
     var abilities: String?
     var groups: String?
-    
-    required init?(map: Map) {
-    }
-    
+
+    required init?(map: Map) {}
+
     func mapping(map: Map) {
         name <- map["name"]
         photo <- map["photo"]
